@@ -1,4 +1,4 @@
-package dev.rdf453.RuneCraft.api.rune;
+package dev.rdf453.Runecraft.api.rune;
 
 public interface IRuneDefine {
 
