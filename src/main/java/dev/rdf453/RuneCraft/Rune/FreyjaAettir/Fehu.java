@@ -6,7 +6,7 @@ public class Fehu implements IRuneDefine{
 
 
     @Override
-    public String simbol() {
+    public String symbol() {
         return "ᚠ";
     }
 }

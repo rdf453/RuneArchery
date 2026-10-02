@@ -1,4 +1,4 @@
-package dev.rdf453.Runcraft.api.rune;
+package dev.rdf453.RunCraft.api.rune;
 
 
 
