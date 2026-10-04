@@ -1,18 +1,21 @@
 package dev.rdf453.RuneCraft.Rune.FreyjaAettir;
 
-import dev.rdf453.RuneCraft.api.rune.IRune;
+import dev.rdf453.RuneCraft.api.Enum.Elements;
+import dev.rdf453.RuneCraft.Rune.BaseRune;
+import dev.rdf453.RuneCraft.api.Enum.ERuneTier;
 
-public class Ansuz extends IRune{
+public class Ansuz extends BaseRune{
+
+    public Ansuz(ERuneTier.Devine,Elements.HOLY,Elements.MIND){
+
+    }
 
     @Override
     public String getSymbol() {
-        return "";
+        return "ᚨ";
     }
 
-    @Override 
-    public int getManaUsage() {
-        return MYTHIC;
-    }
+
     
 }
 //• ᚨ — Ansuz (안수즈)
