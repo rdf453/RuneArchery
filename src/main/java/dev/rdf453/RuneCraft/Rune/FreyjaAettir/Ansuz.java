@@ -6,8 +6,8 @@ import dev.rdf453.RuneCraft.api.Enum.ERuneTier;
 
 public class Ansuz extends BaseRune{
 
-    public Ansuz(ERuneTier.Devine,Elements.HOLY,Elements.MIND){
-
+    public Ansuz(){
+        super(ERuneTier.Divine,Elements.HOLY,Elements.MIND);
     }
 
     @Override
