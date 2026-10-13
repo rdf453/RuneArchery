@@ -35,4 +35,8 @@ public abstract class BaseRune implements IRune{
     public int getManaCost() {
         return this.runeTier.getMana();
     }
+    
+    public Set<Elements> conflictsWith(Elements element) {
+        return Elements.conflictsWith(element);
+    }
 }
