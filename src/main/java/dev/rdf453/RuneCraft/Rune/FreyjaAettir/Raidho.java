@@ -1,7 +1,7 @@
 package dev.rdf453.RuneCraft.Rune.FreyjaAettir;
 
 import dev.rdf453.RuneCraft.api.Enum.ERuneTier;
-import dev.rdf453.RuneCraft.api.rune.IRune;
+
 import dev.rdf453.RuneCraft.Rune.BaseRune;
 
 public class Raidho extends BaseRune {

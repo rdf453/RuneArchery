@@ -1,31 +1,30 @@
 package dev.rdf453.RuneCraft.Rune;
 
-import java.util.EnumSet;
-import java.util.Set;
+
 
 import dev.rdf453.RuneCraft.api.Enum.ERuneTier;
-import dev.rdf453.RuneCraft.api.Enum.Elements;
 import dev.rdf453.RuneCraft.api.rune.IRune;
 
 public abstract class BaseRune implements IRune{
     protected final ERuneTier runeTier;
+    protected final String runeId;
+    protected final String symbol;
 
-    protected final Set<Elements> elements;
-    public BaseRune (ERuneTier tier,Elements... elements) {
+
+    public BaseRune (String RuneId,String Symbol, ERuneTier tier) {
+        this.symbol = Symbol;
+        this.runeId = RuneId;
         this.runeTier = tier;
-        if(elements.length == 0) {
-            this.elements = EnumSet.noneOf(Elements.class);
-        }
-        else {
-            this.elements = EnumSet.of(elements[0], elements);
-        }
     }
 
     @Override
     public String getSymbol() {
-        return "";
+        return symbol;
     }
 
+    public String getRuneId() {
+        return runeId;
+    }
     
     @Override
     public ERuneTier getTier() {
@@ -36,7 +35,5 @@ public abstract class BaseRune implements IRune{
         return this.runeTier.getMana();
     }
     
-    public Set<Elements> conflictsWith(Elements element) {
-        return Elements.conflictsWith(element);
-    }
+
 }
