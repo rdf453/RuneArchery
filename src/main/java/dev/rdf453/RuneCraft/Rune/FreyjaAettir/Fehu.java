@@ -2,57 +2,29 @@ package dev.rdf453.RuneCraft.Rune.FreyjaAettir;
 
 import dev.rdf453.RuneCraft.Rune.BaseRune;
 import dev.rdf453.RuneCraft.api.Enum.ERuneTier;
-import dev.rdf453.RuneCraft.api.Enum.Elements;
+
 
 public class Fehu extends BaseRune {
 
     public Fehu() {
-        super(ERuneTier.Physical, Elements.NATURE, Elements.FLOW, Elements.FERTILITY, Elements.ENERGY);
+        super("Fehu","ᚠ",ERuneTier.Physical);
     }
 
-    @Override
-    public String getSymbol() {
-        return "ᚠ";
-    }
+    
 
     @Override
-    public void onArrowShoot() {
+    public void onArrow() {
         // 화살이 3개로 분열
     }
 
-    @Override
-    public void onArrowFly() {
-
+    @Override 
+    public void onBow() {
+        //차지 속도 증가
     }
 
-    @Override
-    public void onArrowHit() {
-        // 약탈적용 및 전리품이 발사자에게 이동
-    }
 
-    @Override
-    public Elements getOpposite() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getOpposite'");
-    }
+    
 
-    @Override
-    public boolean conflictsWith(Elements other) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'conflictsWith'");
-    }
-
-    @Override
-    public void onCharge() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'onCharge'");
-    }
-
-    @Override
-    public void completeCharge() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'completeCharge'");
-    }
 
 }
 // *• ᚠ — Fehu (페후)

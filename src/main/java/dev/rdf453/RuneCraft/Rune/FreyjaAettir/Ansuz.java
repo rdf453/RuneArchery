@@ -1,20 +1,24 @@
 package dev.rdf453.RuneCraft.Rune.FreyjaAettir;
 
-import dev.rdf453.RuneCraft.api.Enum.Elements;
+
 import dev.rdf453.RuneCraft.Rune.BaseRune;
 import dev.rdf453.RuneCraft.api.Enum.ERuneTier;
 
 public class Ansuz extends BaseRune{
 
     public Ansuz(){
-        super(ERuneTier.Divine,Elements.HOLY,Elements.MIND);
+        super("Ansuz","ᚨ",ERuneTier.Divine);
     }
 
-    @Override
-    public String getSymbol() {
-        return "ᚨ";
+    @Override 
+    public void onArrow() {
+        //사용된 마나에 비례해 데미지 증가
     }
 
+    @Override 
+    public void onBow() {
+        //마나무한
+    }
 
     
 }
