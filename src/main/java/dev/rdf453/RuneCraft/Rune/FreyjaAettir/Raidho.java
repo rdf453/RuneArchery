@@ -18,6 +18,7 @@ public class Raidho extends BaseRune {
     @Override 
     public void onBow() {
         //차징속도 증가
+        //패시브: 소지시 이속 증가
     }
 
 }

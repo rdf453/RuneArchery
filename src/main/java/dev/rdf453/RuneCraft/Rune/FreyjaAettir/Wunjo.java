@@ -13,6 +13,7 @@ public class Wunjo extends BaseRune {
     @Override
     public void onBow() {
         //명중 시 기쁨 스택을 쌓고 스택에 따라 이속,차징속도 증가
+        //패시브 행운 증가
     }
 
     @Override

@@ -2,8 +2,11 @@ package dev.rdf453.RuneCraft.Rune;
 
 
 
+import java.util.Locale;
+
 import dev.rdf453.RuneCraft.api.Enum.ERuneTier;
 import dev.rdf453.RuneCraft.api.rune.IRune;
+import net.minecraft.network.chat.Component;
 
 public abstract class BaseRune implements IRune{
     protected final ERuneTier runeTier;
@@ -15,6 +18,12 @@ public abstract class BaseRune implements IRune{
         this.symbol = Symbol;
         this.runeId = RuneId;
         this.runeTier = tier;
+    }
+
+    public Component getDisplayName() {
+        return Component.translatable(
+            "rune.runearchery."+runeId.toLowerCase(Locale.ROOT)
+        );
     }
 
     @Override

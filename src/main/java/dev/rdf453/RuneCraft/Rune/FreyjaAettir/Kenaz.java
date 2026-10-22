@@ -16,6 +16,7 @@ public class Kenaz extends BaseRune {
     @Override
     public void onBow() {
         //움직이는 빛 싸개-차징중 주변 빛 15로 고정
+        //패시브: 소지시 야광투시 부여
     }
 
     @Override
