@@ -23,7 +23,8 @@
 
 
  라그나로크
-    종말의 용: 나중에 RuneCraft로 따로 만들어서 추가
+    종말의 용: 나중에 RuneCraft로 따로 만들어서 추가\
+    Merkstave 
 
  [RuneCraft] 룬 4단계 위계(Tier) 및 분류 명세
 
