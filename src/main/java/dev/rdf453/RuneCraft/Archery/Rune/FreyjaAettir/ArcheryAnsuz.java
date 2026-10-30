@@ -32,8 +32,7 @@ public class ArcheryAnsuz extends Ansuz implements ArcheryRune {
     @Override
     public void onArrow() {
 
-        // 궁니르: 
-        // 적중 대상 마나 몰수
+        // 미니 궁니르로 변환 조준점과 일치하는 대상을 무조건 꿰뚫는다
 
     }
 

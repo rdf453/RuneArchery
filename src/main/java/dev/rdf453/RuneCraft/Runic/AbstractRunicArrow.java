@@ -18,15 +18,40 @@
 
 package dev.rdf453.RuneCraft.Runic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dev.rdf453.RuneCraft.Api.Runic.IRunic;
+import dev.rdf453.RuneCraft.Api.rune.ArcheryRune;
+import dev.rdf453.RuneCraft.Api.rune.IRune;
 import dev.rdf453.RuneCraft.Api.rune.IRuneHolder;
+import dev.rdf453.RuneCraft.common.BaseRune;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.minecraft.world.level.Level;
 
-public abstract class AbstractRunicArrow extends AbstractArrow implements IRunic,IRuneHolder {
+
+//TODo: 굳이 호환성 처리를 안해도 다른 모드와의 호환성을 확보,루닉 화살의 기본 클래스
+public abstract class AbstractRunicArrow extends AbstractArrow implements IRuneHolder {
     
+
+
+
     public AbstractRunicArrow(EntityType<? extends AbstractRunicArrow> type, Level level){
         super(type,level);
     }
+
+    
+    
+    public void activation(List<IRune> AppliedRunes) {
+        for (IRune rune : AppliedRunes) {
+            if(rune instanceof ArcheryRune aRune) {
+                aRune.onArrow(this);
+            }
+        }
+    }
+
+    
+
+    //부여된 아이템과 연결, 
 }

@@ -13,11 +13,15 @@ import dev.rdf453.RuneCraft.Api.Enum.ERuneTier;
 
 public interface IRune {
 
+
+    
     String getRuneId();
 
     String getSymbol();
 
     ERuneTier getTier();
+
+    
 
 
     

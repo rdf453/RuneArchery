@@ -18,13 +18,12 @@
 
 package dev.rdf453.RuneCraft.Runic;
 
-import dev.rdf453.RuneCraft.Api.Runic.IRunic;
 import dev.rdf453.RuneCraft.Api.rune.IRuneHolder;
 import net.minecraft.world.item.ProjectileWeaponItem;
 
 
 
-public abstract class AbstractRunicBow extends ProjectileWeaponItem implements IRunic,IRuneHolder {
+public abstract class AbstractRunicBow extends ProjectileWeaponItem implements IRuneHolder {
     
     public AbstractRunicBow(Properties prob) {
         super(prob);

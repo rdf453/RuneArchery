@@ -8,11 +8,12 @@
 
 package dev.rdf453.RuneCraft.Api.rune;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface IRuneHolder {
-
+    
     List<IRune> getAppliedRunes();
     void addRune(IRune rune);
-    void removeRune(IRune rune);
+    void removeRune(int index);
 }

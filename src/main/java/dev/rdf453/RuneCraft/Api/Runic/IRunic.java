@@ -13,7 +13,6 @@ package dev.rdf453.RuneCraft.Api.Runic;
 
 public interface  IRunic {
     
-    //*C: 룬 클래스
-    // 이 추상 클래스는 룬의 적용, 태그등을 관리한다 */
+    //*확장성 고려 나중에 미구현 루닉아이템을 구현하기 위한 통로로 재정립 */
 
 }

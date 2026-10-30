@@ -18,14 +18,25 @@
 
 package dev.rdf453.RuneCraft.Api.rune;
 
-
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+import net.minecraft.world.item.ItemStack;
 
 public interface  ArcheryRune  {
     
     
+    /**
+     * 
+     *  Rune duplicates allowed
+     * @param user : Player 
+     * @param bow : Bow to be enchanted
+     */
+    void onBow(LivingEntity user,ItemStack bow);
 
-    void onBow();
-
-    
-    void onArrow();
+    /**
+     * 
+     *  Rune duplicates allowed
+     * @param arrow : Arrow to be enchanted
+     */
+    void onArrow(AbstractArrow arrow);
 }

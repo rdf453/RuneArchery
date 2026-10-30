@@ -20,6 +20,10 @@ package dev.rdf453.RuneCraft.Archery.Rune.FreyjaAettir;
 
 import dev.rdf453.RuneCraft.Api.rune.ArcheryRune;
 import dev.rdf453.RuneCraft.common.Rune.FreyjaAettir.Fehu;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.phys.Vec3;
 
 
 
@@ -33,13 +37,15 @@ public class ArcheryFehu extends Fehu implements ArcheryRune {
     
 
     @Override
-    public void onArrow() {
+    public void onArrow(AbstractArrow arrow) {
         // 화살이 3개로 분열
+        Vec3 arrowVec3 = arrow.getDeltaMovement();
     }
 
     @Override 
-    public void onBow() {
+    public void onBow(LivingEntity user,ItemStack bow) {
         //차지 속도 증가
+        
     }
 
 

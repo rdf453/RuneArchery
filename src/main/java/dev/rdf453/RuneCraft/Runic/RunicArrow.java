@@ -18,7 +18,14 @@
 
 package dev.rdf453.RuneCraft.Runic;
 
+import java.util.List;
+
+import dev.rdf453.RuneCraft.Api.rune.IRune;
 
 public class RunicArrow extends AbstractRunicArrow {
+    //기본 루닉화살 구현체 
+    
+
+
     
 }
