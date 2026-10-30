@@ -23,7 +23,11 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Wunjo extends BaseRune {
 
     public Wunjo() {
-        super("Wunjo", "ᚹ", ERuneTier.Mental);
+        this("");
+    }
+
+    public Wunjo(String identifier) {
+        super(identifier + "Wunjo", "ᚹ", ERuneTier.Mental);
     }
 }
 

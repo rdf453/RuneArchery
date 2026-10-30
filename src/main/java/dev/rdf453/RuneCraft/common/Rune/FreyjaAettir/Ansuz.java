@@ -25,10 +25,12 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Ansuz extends BaseRune {
 
     public Ansuz() {
-        super("Ansuz", "ᚨ", ERuneTier.Divine);
+        this("");
     }
 
-
+    public Ansuz(String identifier) {
+        super(identifier + "Ansuz", "ᚨ", ERuneTier.Divine);
+    }
 
 }
 /*

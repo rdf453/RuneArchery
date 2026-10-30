@@ -25,7 +25,7 @@ import dev.rdf453.RuneCraft.common.Rune.TyrAettir.Berkano;
 public class ArcheryBerkano extends Berkano implements ArcheryRune {
 
     public ArcheryBerkano() {
-        super();
+        super("Archery_");
     }
 
     @Override

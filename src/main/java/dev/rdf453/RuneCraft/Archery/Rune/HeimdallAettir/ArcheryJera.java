@@ -32,7 +32,7 @@ public class ArcheryJera extends Jera implements ArcheryRune {
 
     
     public ArcheryJera() {
-        super();
+        super("Archery_");
     }
 
     @Override

@@ -33,7 +33,7 @@ public class ArcheryIsa extends Isa implements ArcheryRune {
 
     
     public ArcheryIsa() {
-        super();
+        super("Archery_");
     }
 
     @Override

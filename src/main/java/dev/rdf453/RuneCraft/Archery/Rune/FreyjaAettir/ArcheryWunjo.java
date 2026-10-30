@@ -27,7 +27,7 @@ public class ArcheryWunjo extends Wunjo implements ArcheryRune {
 
     
     public ArcheryWunjo() {
-        super();
+        super("Archery_");
     }
 
     @Override

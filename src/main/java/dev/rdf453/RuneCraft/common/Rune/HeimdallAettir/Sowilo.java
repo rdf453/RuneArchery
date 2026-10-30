@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Sowilo extends BaseRune {
 
     public Sowilo() {
-        super("Sowilo", "ᛊ", ERuneTier.Divine);
+        this("");
     }
+
+    public Sowilo(String identifier) {
+        super(identifier + "Sowilo", "ᛊ", ERuneTier.Divine);
+    }
+
 }
 
 /*

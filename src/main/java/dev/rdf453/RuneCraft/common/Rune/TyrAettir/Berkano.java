@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Berkano extends BaseRune {
 
     public Berkano() {
-        super("Berkano", "ᛒ", ERuneTier.Mental);
+        this("");
     }
+
+    public Berkano(String identifier) {
+        super(identifier + "Berkano", "ᛒ", ERuneTier.Mental);
+    }
+
 }
 
 /*

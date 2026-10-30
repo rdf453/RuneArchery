@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Raidho extends BaseRune {
 
     public Raidho() {
-        super("Raidho", "ᚱ", ERuneTier.Physical);
+        this("");
     }
+
+    public Raidho(String identifier) {
+        super(identifier + "Raidho", "ᚱ", ERuneTier.Physical);
+    }
+
 }
 
 /*

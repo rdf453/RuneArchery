@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Laguz extends BaseRune {
 
     public Laguz() {
-        super("Laguz", "ᛚ", ERuneTier.Mental);
+        this("");
     }
+
+    public Laguz(String identifier) {
+        super(identifier + "Laguz", "ᛚ", ERuneTier.Mental);
+    }
+
 }
 
 /*

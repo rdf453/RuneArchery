@@ -31,7 +31,7 @@ public class ArcheryFehu extends Fehu implements ArcheryRune {
 
     
     public ArcheryFehu() {
-        super();
+        super("Archery_");
     }
 
     

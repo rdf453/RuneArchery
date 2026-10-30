@@ -26,7 +26,7 @@ public class ArcheryAnsuz extends Ansuz implements ArcheryRune {
 
     
     public ArcheryAnsuz() {
-        super();
+        super("Archery_");
     }
 
     @Override

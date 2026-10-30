@@ -23,7 +23,11 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Fehu extends BaseRune {
 
     public Fehu() {
-        super("Fehu", "ᚠ", ERuneTier.Physical);
+        this("");
+    }
+
+    public Fehu(String identifier) {
+        super(identifier + "Fehu", "ᚠ", ERuneTier.Physical);
     }
 }
 /*

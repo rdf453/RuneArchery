@@ -28,7 +28,7 @@ import dev.rdf453.RuneCraft.common.Rune.TyrAettir.Ingwaz;
 public class ArcheryIngwaz extends Ingwaz implements ArcheryRune {
 
     public ArcheryIngwaz() {
-        super();
+        super("Archery_");
     }
 
     @Override

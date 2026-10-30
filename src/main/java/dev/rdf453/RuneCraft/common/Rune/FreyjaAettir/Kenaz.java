@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Kenaz extends BaseRune {
 
     public Kenaz() {
-        super("Kenaz", "ᚲ", ERuneTier.Physical);
+        this("");
     }
+
+    public Kenaz(String identifier) {
+        super(identifier + "Kenaz", "ᚲ", ERuneTier.Physical);
+    }
+
 }
 
 /*

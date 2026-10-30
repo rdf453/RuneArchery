@@ -29,7 +29,7 @@ public class ArcheryEihwaz extends Eihwaz implements ArcheryRune {
 
     
     public ArcheryEihwaz() {
-        super();
+        super("Archery_");
     }
 
     @Override 

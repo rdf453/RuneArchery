@@ -31,7 +31,7 @@ import dev.rdf453.RuneCraft.common.Rune.HeimdallAettir.Perthro;
 public class ArcheryPerthro extends Perthro implements ArcheryRune {
 
     public ArcheryPerthro() {
-        super();
+        super("Archery_");
     }
 
     @Override

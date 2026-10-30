@@ -34,7 +34,7 @@ public abstract class BaseRune implements IRune{
 
     public BaseRune (String RuneId,String Symbol, ERuneTier tier) {
         this.symbol = Symbol;
-        this.runeId = RuneId;
+        this.runeId = RuneId.toLowerCase(Locale.ROOT);
         this.runeTier = tier;
     }
 

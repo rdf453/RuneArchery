@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Algiz extends BaseRune {
 
     public Algiz() {
-        super("Algiz", "ᛉ", ERuneTier.Spiritual);
+        this("");
     }
+
+    public Algiz(String identifier) {
+        super(identifier + "Algiz", "ᛉ", ERuneTier.Spiritual);
+    }
+
 }
 
 /*

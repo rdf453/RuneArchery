@@ -28,7 +28,7 @@ import dev.rdf453.RuneCraft.common.Rune.TyrAettir.Othala;
 public class ArcheryOthala extends Othala implements ArcheryRune {
 
     public ArcheryOthala() {
-        super();
+        super("Archery_");
     }
 
     @Override

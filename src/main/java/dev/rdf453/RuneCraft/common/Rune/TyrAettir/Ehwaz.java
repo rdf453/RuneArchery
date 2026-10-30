@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Ehwaz extends BaseRune {
 
     public Ehwaz() {
-        super("Ehwaz", "ᛖ", ERuneTier.Physical);
+        this("");
     }
+
+    public Ehwaz(String identifier) {
+        super(identifier + "Ehwaz", "ᛖ", ERuneTier.Physical);
+    }
+
 }
 
 /*

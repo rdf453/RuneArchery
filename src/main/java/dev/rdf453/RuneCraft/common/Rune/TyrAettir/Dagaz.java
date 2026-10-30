@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Dagaz extends BaseRune {
 
     public Dagaz() {
-        super("Dagaz", "ᛞ", ERuneTier.Divine);
+        this("");
     }
+
+    public Dagaz(String identifier) {
+        super(identifier + "Dagaz", "ᛞ", ERuneTier.Divine);
+    }
+
 }
 
 /*

@@ -28,7 +28,7 @@ import dev.rdf453.RuneCraft.common.Rune.TyrAettir.Tiwaz;
 public class ArcheryTiwaz extends Tiwaz implements ArcheryRune {
 
     public ArcheryTiwaz() {
-        super();
+        super("Archery_");
     }
 
     @Override

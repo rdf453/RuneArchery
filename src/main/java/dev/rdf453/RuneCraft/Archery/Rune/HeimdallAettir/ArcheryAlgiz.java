@@ -30,7 +30,7 @@ public class ArcheryAlgiz extends Algiz implements ArcheryRune {
 
     
     public ArcheryAlgiz() {
-        super();
+        super("Archery_");
     }
 
     @Override

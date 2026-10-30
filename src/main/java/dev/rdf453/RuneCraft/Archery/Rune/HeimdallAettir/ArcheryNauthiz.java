@@ -31,7 +31,7 @@ import dev.rdf453.RuneCraft.common.Rune.HeimdallAettir.Nauthiz;
 public class ArcheryNauthiz extends Nauthiz implements ArcheryRune {
 
     public ArcheryNauthiz() {
-        super();
+        super("Archery_");
     }
 
     @Override

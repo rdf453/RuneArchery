@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Uruz extends BaseRune {
 
     public Uruz() {
-        super("Uruz", "ᚢ", ERuneTier.Physical);
+        this("");
     }
+
+    public Uruz(String identifier) {
+        super(identifier + "Uruz", "ᚢ", ERuneTier.Physical);
+    }
+
 }
 
 /*

@@ -29,7 +29,7 @@ public class ArcheryGebo extends Gebo implements ArcheryRune {
 
     
     public ArcheryGebo() {
-        super();
+        super("Archery_");
     }
 
 

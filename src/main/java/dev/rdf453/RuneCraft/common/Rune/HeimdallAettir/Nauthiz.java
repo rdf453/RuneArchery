@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Nauthiz extends BaseRune {
 
     public Nauthiz() {
-        super("Nauthiz", "ᚾ", ERuneTier.Mental);
+        this("");
     }
+
+    public Nauthiz(String identifier) {
+        super(identifier + "Nauthiz", "ᚾ", ERuneTier.Mental);
+    }
+
 }
 
 /*

@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Jera extends BaseRune {
 
     public Jera() {
-        super("Jera", "ᛃ", ERuneTier.Physical);
+        this("");
     }
+
+    public Jera(String identifier) {
+        super(identifier + "Jera", "ᛃ", ERuneTier.Physical);
+    }
+
 }
 
 /*

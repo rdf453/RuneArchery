@@ -30,7 +30,7 @@ public class ArcheryKenaz extends Kenaz implements ArcheryRune {
 
     
     public ArcheryKenaz() {
-        super();
+        super("Archery_");
     }
 
     @Override

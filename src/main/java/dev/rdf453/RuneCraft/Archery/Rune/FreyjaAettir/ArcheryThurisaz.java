@@ -29,7 +29,7 @@ public class ArcheryThurisaz extends Thurisaz implements ArcheryRune {
 
     
     public ArcheryThurisaz() {
-        super();
+        super("Archery_");
     }
 
     // 투리사즈로 인해 소환된 번개에 파사의 공능 부여

@@ -28,7 +28,7 @@ import dev.rdf453.RuneCraft.common.Rune.TyrAettir.Laguz;
 public class ArcheryLaguz extends Laguz implements ArcheryRune {
 
     public ArcheryLaguz() {
-        super();
+        super("Archery_");
     }
 
     @Override

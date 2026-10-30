@@ -28,7 +28,7 @@ import dev.rdf453.RuneCraft.common.Rune.TyrAettir.Mannaz;
 public class ArcheryMannaz extends Mannaz implements ArcheryRune {
 
     public ArcheryMannaz() {
-        super();
+        super("Archery_");
     }
 
     @Override

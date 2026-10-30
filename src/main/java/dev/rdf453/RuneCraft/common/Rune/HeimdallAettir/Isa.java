@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Isa extends BaseRune {
 
     public Isa() {
-        super("Isa", "ᛁ", ERuneTier.Mental);
+        this("");
     }
+
+    public Isa(String identifier) {
+        super(identifier + "Isa", "ᛁ", ERuneTier.Mental);
+    }
+
 }
 
 /*

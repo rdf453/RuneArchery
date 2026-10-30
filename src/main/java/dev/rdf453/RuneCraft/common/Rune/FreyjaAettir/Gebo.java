@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Gebo extends BaseRune {
 
     public Gebo() {
-        super("Gebo", "ᚷ", ERuneTier.Divine);
+        this("");
     }
+
+    public Gebo(String identifier) {
+        super(identifier + "Gebo", "ᚷ", ERuneTier.Divine);
+    }
+
 }
 
 /*

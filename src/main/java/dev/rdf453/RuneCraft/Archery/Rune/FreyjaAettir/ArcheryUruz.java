@@ -30,7 +30,7 @@ public class ArcheryUruz extends Uruz implements ArcheryRune {
 
     
     public ArcheryUruz() {
-        super();
+        super("Archery_");
     }
 
     @Override

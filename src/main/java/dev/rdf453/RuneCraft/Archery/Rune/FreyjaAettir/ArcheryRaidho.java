@@ -26,7 +26,7 @@ public class ArcheryRaidho extends Raidho implements ArcheryRune {
 
     
     public ArcheryRaidho() {
-        super();
+        super("Archery_");
     }
     
     @Override 

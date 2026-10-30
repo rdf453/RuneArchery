@@ -33,7 +33,7 @@ public class ArcheryHagalaz extends Hagalaz implements ArcheryRune {
 
     
     public ArcheryHagalaz() {
-        super();
+        super("Archery_");
     }
 
     @Override

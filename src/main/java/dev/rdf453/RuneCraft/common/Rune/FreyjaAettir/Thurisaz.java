@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Thurisaz extends BaseRune {
 
     public Thurisaz() {
-        super("Thurisaz", "ᚦ", ERuneTier.Spiritual);
+        this("");
     }
+
+    public Thurisaz(String identifier) {
+        super(identifier + "Thurisaz", "ᚦ", ERuneTier.Spiritual);
+    }
+
 }
 
 /*

@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Othala extends BaseRune {
 
     public Othala() {
-        super("Othala", "ᛟ", ERuneTier.Spiritual);
+        this("");
     }
+
+    public Othala(String identifier) {
+        super(identifier + "Othala", "ᛟ", ERuneTier.Spiritual);
+    }
+
 }
 
 /*

@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Tiwaz extends BaseRune {
 
     public Tiwaz() {
-        super("Tiwaz", "ᛏ", ERuneTier.Divine);
+        this("");
     }
+
+    public Tiwaz(String identifier) {
+        super(identifier + "Tiwaz", "ᛏ", ERuneTier.Divine);
+    }
+
 }
 
 /*

@@ -28,7 +28,7 @@ import dev.rdf453.RuneCraft.common.Rune.TyrAettir.Dagaz;
 public class ArcheryDagaz extends Dagaz implements ArcheryRune {
 
     public ArcheryDagaz() {
-        super();
+        super("Archery_");
     }
 
     @Override

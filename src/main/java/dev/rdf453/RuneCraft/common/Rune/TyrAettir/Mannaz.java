@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Mannaz extends BaseRune {
 
     public Mannaz() {
-        super("Mannaz", "ᛗ", ERuneTier.Mental);
+        this("");
     }
+
+    public Mannaz(String identifier) {
+        super(identifier + "Mannaz", "ᛗ", ERuneTier.Mental);
+    }
+
 }
 
 /*

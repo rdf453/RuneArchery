@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Perthro extends BaseRune {
 
     public Perthro() {
-        super("Perthro", "ᛈ", ERuneTier.Spiritual);
+        this("");
     }
+
+    public Perthro(String identifier) {
+        super(identifier + "Perthro", "ᛈ", ERuneTier.Spiritual);
+    }
+
 }
 
 /*

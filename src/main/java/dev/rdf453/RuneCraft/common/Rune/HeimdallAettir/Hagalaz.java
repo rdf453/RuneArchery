@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Hagalaz extends BaseRune {
 
     public Hagalaz() {
-        super("Hagalaz", "ᚺ", ERuneTier.Spiritual);
+        this("");
     }
+
+    public Hagalaz(String identifier) {
+        super(identifier + "Hagalaz", "ᚺ", ERuneTier.Spiritual);
+    }
+
 }
 
 /*

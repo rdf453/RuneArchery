@@ -23,8 +23,13 @@ import dev.rdf453.RuneCraft.common.BaseRune;
 public class Ingwaz extends BaseRune {
 
     public Ingwaz() {
-        super("Ingwaz", "ᛝ", ERuneTier.Divine);
+        this("");
     }
+
+    public Ingwaz(String identifier) {
+        super(identifier + "Ingwaz", "ᛝ", ERuneTier.Divine);
+    }
+
 }
 
 /*

@@ -32,7 +32,7 @@ public class ArcherySowilo extends Sowilo implements ArcheryRune {
 
     
     public ArcherySowilo() {
-        super();
+        super("Archery_");
     }
 
     @Override
