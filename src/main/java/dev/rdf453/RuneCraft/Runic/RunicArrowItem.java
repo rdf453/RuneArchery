@@ -21,6 +21,8 @@ package dev.rdf453.RuneCraft.Runic;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import dev.rdf453.RuneCraft.Api.rune.IRune;
 import dev.rdf453.RuneCraft.Api.rune.IRuneHolder;
 import dev.rdf453.RuneCraft.Registry.RuneRegistry;
@@ -35,8 +37,9 @@ import net.minecraft.world.item.component.CustomData;
 
 public class RunicArrowItem extends ArrowItem implements IRuneHolder {
     private static final String RUNES_KEY = "runes";
-    List<String> runeIds = new ArrayList<>();
-    List<IRune> AppliedRunes = runeIds.stream().map(RuneRegistry::get).toList();
+    
+// TODO: 다른 모드 화살의 기존 동작은 유지하면서, 발사된 화살 엔티티에 저장된 룬 효과를 연결하기
+// 한마디로 Custom_DATA에 룬 정보 넣는거 분리하고 발사되는거 따로 구현하고 AbstractRunicArrow 오버라이팅하기(영향 최소화하기)
 
     RunicArrowItem(Item.Properties prop) {
         super(prop);
@@ -44,7 +47,7 @@ public class RunicArrowItem extends ArrowItem implements IRuneHolder {
 
     @Override
     public List<IRune> getAppliedRunes() {
-        return AppliedRunes;
+        return readRuneIds(getDefaultInstance());
     }
 
     /**
@@ -57,26 +60,44 @@ public class RunicArrowItem extends ArrowItem implements IRuneHolder {
         return 3;
     }
 
-    protected boolean isReachedLimit() {
-        return runeIds.size() >= getMaxRune();
+    protected boolean isReachedLimit(ItemStack item) {
+        return readRuneIds(item).size() >= getMaxRune();
     }
 
-    public void addRune(IRune rune) {
-        if (isReachedLimit())
+    public void addRune(IRune rune,ItemStack item) {
+        List<String> runeIds = readRuneIds(item);
+        if (isReachedLimit(item))
             return;
         runeIds.add(rune.getRuneId());
+        writeRuneIds(item, runeIds);//아몰라 내일해
     }
 
-    public void removeRune(int index) {
+    public void removeRune(int index, ItemStack item) {
+        List<String> runeIds = readRuneIds(item);
         if (runeIds.size() > 0 && index >= 0 && index < runeIds.size()) {
             runeIds.remove(index);
+            writeRuneIds(item, runeIds);
         }
+    }
+
+    
+    public void writeRuneIds(ItemStack item, List<String> runeIds) {
+        CustomData.update(DataComponents.CUSTOM_DATA, item, tag -> {
+            ListTag runes = new ListTag();
+            for (String id : runeIds) {
+                runes.add(StringTag.valueOf(id));
+            }
+            tag.put(RUNES_KEY, runes);
+            
+        }
+        
+    );
     }
 
     public List<String> readRuneIds(ItemStack stack) {
         CustomData data = stack.get(DataComponents.CUSTOM_DATA);
         if (data == null) {
-            return List.of();
+            return new ArrayList<>();
         }
 
         ListTag runes = data.copyTag().getListOrEmpty(RUNES_KEY);
@@ -85,18 +106,6 @@ public class RunicArrowItem extends ArrowItem implements IRuneHolder {
             ids.add(runes.getString(i).orElseThrow());
         }
         return ids;
-    }
-
-    public void writeRuneIds(ItemStack item, List<String> runeIds) {
-        CustomData.update(DataComponents.CUSTOM_DATA, item, tag -> {
-            ListTag runes = new ListTag();
-            for (String id : runeIds) {
-                runes.add(StringTag.valueOf(id));
-            }
-            tag.put(RUNES_KEY, runes);
-        }
-        
-    );
     }
 }
 
