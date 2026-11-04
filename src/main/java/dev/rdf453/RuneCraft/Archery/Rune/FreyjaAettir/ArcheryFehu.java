@@ -40,11 +40,12 @@ public class ArcheryFehu extends Fehu implements ArcheryRune {
     public void onArrow(AbstractArrow arrow) {
         // 화살이 3개로 분열
         Vec3 arrowVec3 = arrow.getDeltaMovement();
+        
     }
 
     @Override 
     public void onBow(LivingEntity user,ItemStack bow) {
-        //차지 속도 증가
+        //차지 속도 증가,행운 증가
         
     }
 

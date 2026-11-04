@@ -7,7 +7,6 @@ import com.mojang.serialization.Codec;
 
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.world.entity.animal.fish.Cod;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class RuneDataComponents {

@@ -16,57 +16,42 @@
  * along with RuneCraft. If not, see <https://www.gnu.org/licenses/lgpl-3.0.html>.
  */
 
-package dev.rdf453.RuneCraft.Runic;
+package dev.rdf453.RuneCraft.Archery.Helper;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.annotation.Nullable;
 
 import dev.rdf453.RuneCraft.Api.rune.ArcheryRune;
 import dev.rdf453.RuneCraft.Api.rune.IRune;
-import dev.rdf453.RuneCraft.Api.rune.IRuneHolder;
 import dev.rdf453.RuneCraft.Helper.RuneHelper;
-import dev.rdf453.RuneCraft.Registry.RuneDataComponents;
 import dev.rdf453.RuneCraft.Registry.RuneRegistry;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.CustomData;
-import net.minecraft.world.level.Level;
 
 //TODo: 굳이 호환성 처리를 안해도 다른 모드와의 호환성을 확보,루닉 화살의 기본 클래스
-public abstract class AbstractRunicArrow extends AbstractArrow implements IRuneHolder {
-    
-    
-    public AbstractRunicArrow(EntityType<? extends AbstractRunicArrow> type, Level level) {
-        super(type, level);
-        
+public class RunicArrowHelper  {
+
+    private RunicArrowHelper() {
     }
 
-    public AbstractRunicArrow(EntityType<? extends AbstractArrow> type, double x, double y, double z, Level level, ItemStack pickupItemStack, @Nullable ItemStack firedFromWeapon){
-        super(type,x,y,z,level,pickupItemStack,firedFromWeapon);
-    }
-
-    
-
-    public List<IRune> readRunes() {
-        return RuneHelper.readRuneIds(getPickupItemStackOrigin()).stream()
+    public static List<IRune> readRunes(ItemStack item) {
+        return RuneHelper.readRuneIds(item).stream()
                 .map(RuneRegistry::get)
                 .toList();
     }
 
-    public void activation() {
-        for (IRune rune : readRunes()) {
+    public static void activation(ItemStack item,AbstractArrow arrow) {
+        for (IRune rune : readRunes(item)) {
             if (rune instanceof ArcheryRune aRune) {
-                aRune.onArrow(this);
+                aRune.onArrow(arrow);
             }
         }
-    }
-
-
 
     // 부여된 아이템과 연결, 활에서의 영향 구현 필요
+}
+
+
+
+
+
+
 }
