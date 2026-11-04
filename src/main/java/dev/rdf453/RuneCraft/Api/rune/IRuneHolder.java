@@ -11,9 +11,23 @@ package dev.rdf453.RuneCraft.Api.rune;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.world.item.ItemStack;
+
 public interface IRuneHolder {
+
+    List<String> getAppliedRunes(ItemStack item);
+
+    static void addRune(IRune rune, ItemStack item) {
+    }
+
+    static void removeRune(int index, ItemStack item) {
+    }
+
+    /**
+     * Maximum runes that can be enchanted
+     *
+     * 
+     * @return
+     */
     
-    List<IRune> getAppliedRunes();
-    void addRune(IRune rune);
-    void removeRune(int index);
 }
