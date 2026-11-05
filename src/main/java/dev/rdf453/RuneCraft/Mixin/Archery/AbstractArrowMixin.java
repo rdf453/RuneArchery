@@ -1,5 +1,7 @@
 package dev.rdf453.RuneCraft.Mixin.Archery;
 
+import java.util.List;
+
 import javax.annotation.Nullable;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -21,7 +23,7 @@ public class AbstractArrowMixin {
 
     @Inject(method = "shoot",at = @At("TAIL") )
     private void isRunicArrow(Level level, ItemStack itemStack, LivingEntity owner, @Nullable ItemStack firedFromWeapon) {
-        var a = RuneHelper.readRuneIds(itemStack);
+        List<String> a = RuneHelper.readRuneIds(itemStack);
         if(!a.isEmpty() && a != null) {
             AbstractArrow arrow = (AbstractArrow) (Object) this;
             var temp = arrow.getPickupItemStackOrigin().get(RuneDataComponents.RUNES.get());

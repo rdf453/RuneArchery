@@ -16,7 +16,7 @@ public final class RuneAttachments {
 
     public static final Supplier<AttachmentType<List<String>>> RUNES =
         REGISTER.register("rune_ids", () ->
-            AttachmentType.<List<String>>builder(ArrayList::new)
+            AttachmentType.<List<String>>builder(List<String>)
                 .serialize(Codec.STRING.listOf().fieldOf("rune_ids"))
                 .build());
 
